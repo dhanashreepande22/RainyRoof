@@ -1,0 +1,333 @@
+@import 'components/header.css';
+@import 'components/buttons.css';
+@import 'utils/mixins.css';
+@import 'utils/variables.css';
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.main-content {
+    position: relative;
+    text-align: center;
+    color: white;
+    height: 100vh;
+}
+
+.background-image {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.text-section {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.primary-text {
+    font-size: 3em;
+    margin: 0;
+}
+
+.secondary-text {
+    font-size: 2em;
+    margin: 0;
+}
+
+.action-buttons {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* styles/components/get-food.css */
+.get-food-section {
+    padding: 5rem 2rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.get-food-title {
+    font-family: 'Lato', sans-serif;
+    font-size: 36px;
+    font-weight: 300;
+    color: rgba(85, 85, 85, 1);
+    letter-spacing: 1px;
+}
+
+.divider {
+    width: 150px;
+    height: 3px;
+    background-color: rgba(230, 126, 34, 1);
+    margin: 1rem auto;
+}
+
+.get-food-description {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(85, 85, 85, 1);
+    line-height: 1.5;
+    margin-bottom: 3rem;
+}
+
+.get-food-features {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.feature {
+    flex-basis: 22%;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.icon-container {
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+}
+
+.icon-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Adjust as needed */
+}
+
+
+.feature-title {
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    color: rgba(85, 85, 85, 1);
+    margin-bottom: 1rem;
+}
+
+.feature-description {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(85, 85, 85, 1);
+    line-height: 1.5;
+}
+
+.food-items-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Adjust to 4 columns */
+    gap: 0; /* No gap between the cards */
+}
+
+.food-item {
+    width: 100%; /* Full width to fill the grid column */
+    height: 100%; /* Height adjusted for consistency */
+    overflow: hidden;
+    position: relative; /* Needed for absolute positioning of caption */
+    cursor: pointer; /* Optional: Changes the cursor on hover */
+}
+
+.food-item-img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for transform */
+}
+
+.food-item:hover .food-item-img {
+    transform: scale(1.1); /* Enlarge the image on hover */
+}
+
+.food-item-caption,
+.food-item-description {
+    display: none; /* Hide the text by default */
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.food-item:hover .food-item-caption,
+.food-item:hover .food-item-description {
+    display: block; /* Show the text on hover */
+}
+
+.how-it-works-section {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f9f9f9;
+}
+
+.how-it-works-heading {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.horizontal-divider {
+    width: 80px;
+    height: 4px;
+    background-color: #ff6200;
+    margin: 0 auto 20px auto;
+}
+
+.how-it-works-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.phone-image {
+    max-width: 300px;
+}
+
+.phone-image img {
+    width: 100%;
+}
+
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+}
+
+.step {
+    text-align: left;
+    display: flex;
+    align-items: center; /* Center vertically */
+}
+
+.step-circle {
+    width: 60px; /* Ensure width and height are equal */
+    height: 60px; /* Ensure width and height are equal */
+    border-radius: 50%; /* Makes it a perfect circle */
+    background-color: #ff6200; /* Orange color */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    margin-right: 15px; /* Spacing between circle and text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+}
+
+.step-text {
+    font-size: 1em;
+    color: #666;
+}
+
+.app-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.app-links img {
+    width: 140px;
+}
+/* styles/main.css ==> Add and update this content in your main.css */
+.cities-container {
+    width: 100%; 
+    max-width: 1140px; 
+    margin: 0 auto; 
+    text-align: center;
+    padding: 20px; 
+}
+
+.section-heading {
+    font-family: 'Lato', sans-serif;
+    font-size: 36px;
+    font-weight: 300;
+    color: rgba(85, 85, 85, 1);
+    letter-spacing: 1px;
+    line-height: 41.4px;
+    margin-bottom: 10px; 
+}
+
+.divider {
+    width: 100px;
+    height: 2px;
+    background-color: rgba(230, 126, 34, 1);
+    margin: 10px auto 30px auto;
+}
+
+.cities-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+  
+.city-card {
+    width: 240px; 
+    margin: 10px;
+    text-align: center;
+    vertical-align: top;
+    border-radius: 5px; 
+    overflow: hidden; 
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.city-card:hover {
+    transform: translateY(-5px); 
+}
+
+.city-card img {
+    width: 100%;
+    height: 165.69px; 
+    object-fit: cover;
+}
+
+.city-card h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    color: rgba(85, 85, 85, 1);
+    line-height: 25.3px;
+    margin: 10px 0; 
+}
+
+.city-card p {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(85, 85, 85, 1);
+    line-height: 23px;
+    margin: 5px 0; 
+}
+
+.city-card .city-handle {
+    cursor: pointer; 
+    color: rgba(230, 126, 34, 1);
+}
+
+.city-card .city-handle:hover {
+    color: rgba(255, 100, 0, 1); 
+}
+
+@media only screen and (max-width: 768px) {
+    .city-card {
+        width: 45%; 
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .city-card {
+        width: 100%; 
+    }
+}

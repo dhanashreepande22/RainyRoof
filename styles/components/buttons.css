@@ -1,0 +1,24 @@
+.btn {
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 5px;
+}
+
+.btn-orange {
+    background-color: rgba(230, 126, 34, 1);
+    color: white;
+}
+
+.btn-grey {
+    background-color: rgba(127, 140, 141, 1);
+    color: white;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
